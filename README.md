@@ -6,28 +6,22 @@ Hello,again! This time we will make a custom libary for C
 
 First we make header file,witch contains functions for our code.
 
-Type in terminal:
+Because the libary code it's so long,I explain shortly!
 
-```bash
-code stdsb.h
-```
+First we make a header file named "stdsb.h".
 
-and:
-
-```bash
-code test.c
-```
-
-Please press ctrl + s keys for save file on your folder.
-
-First,we define libary and it's name
+We define the start code and where end's code for libary like that:
 
 ```h
 #ifndef stdsb_H
 #define stdsb_H
+
+// your imported libaries
+
+// your functions
 ```
 
-After,we define linary and it's name we have to import libaries for code.
+After this we import the libaries:
 
 ```h
 #include <stdio.h>
@@ -38,7 +32,7 @@ After,we define linary and it's name we have to import libaries for code.
 #include <ctype.h>
 ```
 
-After you import libaries you have make functions,first we make function can return a new line:
+After we import this libaries we make new_line function(return to a new line like '\n') like this:
 
 ```h
 void new_line(void)
@@ -47,35 +41,20 @@ void new_line(void)
 }
 ```
 
-After we make new_line() function,we create logic functions:
+After we made this function we make logical funtions like  `multiply( * )`, `add( + )`,etc.
 
-Adding function
+After we made this logical functions funtions we make like this funtions,but exp: the multiply will be three numbers **not 2.**
 
-```h
-void add(int a,int b)
-{
-    printf("%d",a + b);
-    new_line();
-}
-```
+After we make three numbers multiply we code time.
 
-Multiply function:
+***What is this chinese?***
 
-```h
-void multiply(int a,int b)
-{
-    printf("%d",a * b);
-    new_line();
-}
-```
+* We make a function get time,hour or date;
+* And we make a funtion `is_holiday`,this funtion verify current date and time and print holiday name,**else** _if not_ a holiday function return's "**Right now,in your localtime,I not found any holiday!**";
 
-Devide function:
+After we made **time-based** functions,we make converter functions like this _lowercase -> uppercase_ and _uppercase -> lowercase_.
 
-```h
-void devide(int a,int b)
-{
-    printf("%d",a / b);
-    new_line();
-}
-```
+After make 'converter' we make lenght verifier and displays the string lenght.
+
+After we made lenght verifier,we make `swap()` function,and displays the numbers or values swaped.
 
