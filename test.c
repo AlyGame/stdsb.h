@@ -1,6 +1,6 @@
-#include "stdsb.h"
+#include <stdsb.h>
 
 int main()
 {
-    
+    test();
 } 

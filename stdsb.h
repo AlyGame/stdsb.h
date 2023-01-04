@@ -1,3 +1,40 @@
+/**
+ * stdsb Library for C
+ * https://github.com/AlyGame/stdsb.h
+ *
+ *
+ * Copyright (c) 2022
+ * All rights reserved
+ *
+ * BSD 3-Clause License
+ * http://www.opensource.org/licenses/BSD-3-Clause
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
+ *
+ * * Redistributions of source code must retain the above copyright notice,
+ *   this list of conditions and the following disclaimer.
+ * * Redistributions in binary form must reproduce the above copyright
+ *   notice, this list of conditions and the following disclaimer in the
+ *   documentation and/or other materials provided with the distribution.
+ * * Neither the name of stdsb nor the names of its contributors may be used
+ *   to endorse or promote products derived from this software without
+ *   specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+ * IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+ * TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+ * PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ * HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ * TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
 #ifndef stdsb_H
 #define stdsb_H
 
@@ -7,6 +44,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+
 
 void new_line(void)
 {
@@ -42,25 +80,21 @@ void add_3(int a, int b, int c)
     printf("%d", a + b + c);
     new_line();
 }
-
 void multiply_3(int n1, int n2, int n3)
 {
     printf("%d", n1 * n2 * n3);
     new_line();
 }
-
 void division_3(int n1, int n2, int n3)
 {
     printf("%d", n1 / n2 / n3);
     new_line();
 }
-
 void decrease(int n1, int n2)
 {
     printf("%d", n1 - n2);
     new_line();
 }
-
 void decrease_3(int n1, int n2, int n3)
 {
     printf("%d", n1 - n2 - n3);
@@ -76,7 +110,6 @@ void get_localtime(void)
     timeinfo = localtime(&rawtime);
     printf("%s", asctime(timeinfo));
 }
-
 void get_date(void)
 {
     time_t t;
@@ -85,7 +118,6 @@ void get_date(void)
     printf(" %d-%d-%d", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
     new_line();
 }
-
 void get_hour(void)
 {
     time_t t;
@@ -95,7 +127,6 @@ void get_hour(void)
     printf("Current hour is: %d", tm.tm_hour);
     new_line();
 }
-
 void get_hour_and_minutes(void)
 {
     time_t t;
@@ -105,17 +136,15 @@ void get_hour_and_minutes(void)
     printf("%d:%d", tm.tm_hour, tm.tm_min);
     new_line();
 }
-
 void get_year(void)
 {
     time_t t;
     t = time(NULL);
     struct tm tm;
     tm = *localtime(&t);
-    printf("%d",tm.tm_year + 1900);
+    printf("%d", tm.tm_year + 1900);
     new_line();
 }
-
 void get_minutes(void)
 {
     time_t t;
@@ -125,7 +154,6 @@ void get_minutes(void)
     printf("%d", tm.tm_min);
     new_line();
 }
-
 void get_seconds(void)
 {
     time_t t;
@@ -145,17 +173,15 @@ void get_month(void)
     printf("%d", tm.tm_mon + 1);
     new_line();
 }
-
 void get_day(void)
 {
     time_t t;
     t = time(NULL);
     struct tm tm;
     tm = *localtime(&t);
-    printf("%d",tm.tm_mday);
+    printf("%d", tm.tm_mday);
     new_line();
 }
-
 void is_holiday(void)
 {
     time_t t;
@@ -203,7 +229,6 @@ void is_holiday(void)
         new_line();
     }
 }
-
 void make_upper(char str[])
 {
     int j = 0;
@@ -216,7 +241,6 @@ void make_upper(char str[])
     }
     new_line();
 }
-
 void make_lower(char str[])
 {
     int j = 0;
@@ -229,7 +253,6 @@ void make_lower(char str[])
     }
     new_line();
 }
-
 void what_lenght(char s[])
 {
     int n;
@@ -237,22 +260,21 @@ void what_lenght(char s[])
     printf("%d", n);
     new_line();
 }
-
 void swap(int n1, int n2)
 {
     int temp;
     temp = n1;
     n1 = n2;
     n2 = temp;
-    printf("%d %d",n1,n2);
+    printf("%d %d", n1, n2);
     new_line();
 }
-
 void test(void)
 {
-    swap(1,2);
+    swap(1, 2);
     new_line();
-    add(1,3);
+    add(1, 3);
 }
+
 
 #endif
