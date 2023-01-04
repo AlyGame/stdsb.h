@@ -74,7 +74,7 @@ void get_localtime(void)
 
     time(&rawtime);
     timeinfo = localtime(&rawtime);
-    printf("Current local time and date: %s", asctime(timeinfo));
+    printf("%s", asctime(timeinfo));
 }
 
 void get_date(void)
@@ -82,7 +82,7 @@ void get_date(void)
     time_t t;
     t = time(NULL);
     struct tm tm = *localtime(&t);
-    printf("Current Date: %d-%d-%d", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
+    printf(" %d-%d-%d", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
     new_line();
 }
 
@@ -96,13 +96,23 @@ void get_hour(void)
     new_line();
 }
 
-void get_hour_and_time(void)
+void get_hour_and_minutes(void)
 {
     time_t t;
     t = time(NULL);
     struct tm tm;
     tm = *localtime(&t);
-    printf("Current hour is: %d:%d", tm.tm_hour, tm.tm_min);
+    printf("%d:%d", tm.tm_hour, tm.tm_min);
+    new_line();
+}
+
+void get_year(void)
+{
+    time_t t;
+    t = time(NULL);
+    struct tm tm;
+    tm = *localtime(&t);
+    printf("%d",tm.tm_year + 1900);
     new_line();
 }
 
@@ -112,7 +122,7 @@ void get_minutes(void)
     t = time(NULL);
     struct tm tm;
     tm = *localtime(&t);
-    printf("Current minutes is: %d minutes", tm.tm_min);
+    printf("%d", tm.tm_min);
     new_line();
 }
 
@@ -122,7 +132,7 @@ void get_seconds(void)
     t = time(NULL);
     struct tm tm;
     tm = *localtime(&t);
-    printf("Current seconds is: %d seconds", tm.tm_sec);
+    printf("%d", tm.tm_sec);
     new_line();
 }
 
@@ -132,7 +142,17 @@ void get_month(void)
     t = time(NULL);
     struct tm tm;
     tm = *localtime(&t);
-    printf("Current month is: %d", tm.tm_mon);
+    printf("%d", tm.tm_mon + 1);
+    new_line();
+}
+
+void get_day(void)
+{
+    time_t t;
+    t = time(NULL);
+    struct tm tm;
+    tm = *localtime(&t);
+    printf("%d",tm.tm_mday);
     new_line();
 }
 
@@ -170,10 +190,17 @@ void is_holiday(void)
     else if (tm.tm_mon == 12 || tm.tm_mday == 26)
     {
         printf("It's secondary Christmas day!\n  HO..HO..HO!");
+        new_line();
     }
     else if (tm.tm_mon == 12 || tm.tm_mday == 27)
     {
         printf("It's third Christams day!\n  HO..HO..HO!");
+        new_line();
+    }
+    else
+    {
+        printf("At the moment it is not a defined holiday. You can define it anytime!");
+        new_line();
     }
 }
 
@@ -181,7 +208,6 @@ void make_upper(char str[])
 {
     int j = 0;
     char ch;
-    printf("The uppercase text is: ");
     while (str[j])
     {
         ch = str[j];
@@ -195,7 +221,6 @@ void make_lower(char str[])
 {
     int j = 0;
     char ch;
-    printf("The lowercase text is: ");
     while (str[j])
     {
         ch = str[j];

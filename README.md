@@ -50,7 +50,7 @@ After we make three numbers multiply we code time.
 ***What is this chinese?***
 
 * We make a function get time,hour or date;
-* And we make a funtion `is_holiday`,this funtion verify current date and time and print holiday name,**else** _if not_ a holiday function return's "**Right now,in your localtime,I not found any holiday!**";
+* And we make a funtion `is_holiday`,this funtion verify current date and time and print holiday name,**else** _if not_ a holiday function return's "**At the moment it is not a defined holiday. You can define it anytime!**";
 
 After we made **time-based** functions,we make converter functions like this _lowercase -> uppercase_ and _uppercase -> lowercase_.
 
@@ -58,3 +58,4 @@ After make 'converter' we make lenght verifier and displays the string lenght.
 
 After we made lenght verifier,we make `swap()` function,and displays the numbers or values swaped.
 
+After we make swap function we make `test()` function,witch verify the libary works

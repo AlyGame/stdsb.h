@@ -169,7 +169,7 @@ Type this code to your code IDE:
 ```c
 #include <stdsb.h>
 
-int maib()
+int main()
 {
     test();
 }
@@ -180,5 +180,3 @@ Your output necesary to be:
 ![image](https://user-images.githubusercontent.com/96312446/209479805-944f025a-4b65-4cfd-a585-971e4cf07c2e.png)
 
 If you haven't this output.You not installed libary or installed incorrectly.
-
-# How install?
