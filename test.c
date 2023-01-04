@@ -2,5 +2,5 @@
 
 int main()
 {
-    test();
+    add(2,3);
 } 

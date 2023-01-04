@@ -1,0 +1,2 @@
+LDLIBS += -stdsb
+CC := clang

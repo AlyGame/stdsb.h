@@ -59,3 +59,31 @@ After make 'converter' we make lenght verifier and displays the string lenght.
 After we made lenght verifier,we make `swap()` function,and displays the numbers or values swaped.
 
 After we make swap function we make `test()` function,witch verify the libary works
+
+# Install
+
+You can install my libary following this steps:
+
+> 1.Download last version of stdsb.h libary for linux ubuntu
+
+> 2.Unzip the archive and open terminal to extracted folder and type in terminal:
+
+
+```bash
+sudo cp stdsb.h /usr/include
+```
+
+You can use clang with Makefile file.
+
+Type in your project (terminal):
+
+```bash
+nano Makefile
+```
+
+And type:
+
+``` Makefile
+LDLIBS += stdsb.h
+CC := clang
+```
