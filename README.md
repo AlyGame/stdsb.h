@@ -84,6 +84,5 @@ nano Makefile
 And type:
 
 ``` Makefile
-LDLIBS += stdsb.h
 CC := clang
 ```
