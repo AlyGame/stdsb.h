@@ -7,11 +7,9 @@ First this libary is customized by me.
 What makes `new_line()`?
 
 * The `new_line()` function make a new line like ``printf("\n");``
-* The `add()` function make add two numbers exp: 2 and 3 `add(2,3);` and the result will be like this:
- 
-![image](https://user-images.githubusercontent.com/96312446/209476962-20db2b77-6d65-4e26-9168-3ec0c05c9307.png)
+* The `add()` function make add two numbers exp: 2 and 3 `add(2,3);`
 
-More beautiful is: 
+Code will be:
 
 ```c
     int f;
@@ -26,15 +24,9 @@ More beautiful is:
     add(f,n);
 ```
 
-And the output will be like this:
+* The `add_3()` funtion allow user to add up to three numbers `add_3(1,3,2);`
 
-![image](https://user-images.githubusercontent.com/96312446/209477397-8fec2219-dabd-4dc9-a911-89008f747891.png)
-
-* The `add_3()` funtion allow user to add up to three numbers `add_3(1,3,2);` and the output will be like this:
-
-![image](https://user-images.githubusercontent.com/96312446/209477458-a28372ac-bfce-47f8-b6dc-f3cdf4c3868e.png)
-
-More beautiful will be:
+Code will be:
 
 ```c
     int n;
@@ -51,78 +43,37 @@ More beautiful will be:
     new_line();
     add_3(f,n,s);
 ```
+* The `decrease()` function exp (negative number): `decrease(2,4);` exp (possitive): `decrease(4,3);`
 
-And the output will be like this:
+* The `decrease_3();` allow user to make decrease with 3 numbers exp: `decrease_3(7,2,1);`
 
-![image](https://user-images.githubusercontent.com/96312446/209477533-1aab63f0-ae4b-4110-a754-0dc663628555.png)
+* The `multiply();` function exp: `multiply(3,2);`
 
-* The `decrease()` function exp (negative number): `decrease(2,4);` exp (possitive): `decrease(4,3);` and the output will be like this:
+* The `multiply_3();` this function allow user to make multiply with 3 numbers exp: `multiply_3();`
 
-Negative result: 
+* The `devide();` function exp: `devide(12,2);`
 
-![image](https://user-images.githubusercontent.com/96312446/209477701-e10933fc-9732-4630-9c11-0532be4cf356.png)
-
-Possitive result:
-
-![image](https://user-images.githubusercontent.com/96312446/209477720-dfcd99f0-ccee-43af-b658-2b8314aacdf8.png)
-
-
-* The `decrease_3();` allow user to make decrease with 3 numbers exp: `decrease_3(7,2,1);` and the output will be like this:
-
-![image](https://user-images.githubusercontent.com/96312446/209477796-5d29d7ef-717f-40d4-9154-50b64933dbae.png)
-
-
-* The `multiply();` function exp: `multiply(3,2);` the output will be like this:
-
-![image](https://user-images.githubusercontent.com/96312446/209478316-53cda7e8-da09-405f-9d10-e8822bc7b184.png)
-
-* The `multiply_3();` this function allow user to make multiply with 3 numbers exp: `multiply_3();` the output will be like this:
-
-![image](https://user-images.githubusercontent.com/96312446/209478390-04f22f14-ebd8-4bc4-b5d3-114610f7923d.png)
-
-* The `devide();` function exp: `devide(12,2);` the output will be like this:
-
-![image](https://user-images.githubusercontent.com/96312446/209478440-b8a172a4-80a7-4628-bee9-cdea449d50f0.png)
-
-* The `devide_3();` function  allow user to make devides with 3 numbers exp: `devide_3(12,2,2)` the output will be like this:
-
-![image](https://user-images.githubusercontent.com/96312446/209478541-563c83d2-1af2-47e0-af98-ccba7408750d.png)
+* The `devide_3();` function  allow user to make devides with 3 numbers exp: `devide_3(12,2,2)`
 
 ## Time functions
 
-* The `get_localtime();` output will be like this:
+* The `get_localtime();` output will be like your local time
 
-![image](https://user-images.githubusercontent.com/96312446/209478593-496f096e-74ef-4e48-ada2-b2ee31d326da.png)
+* The `get_date()` output will be your current date
 
-* The `get_date()` output will be like this:
+* The `get_hour()` output will be your current hour
 
-![image](https://user-images.githubusercontent.com/96312446/209478616-66c5d632-1ddd-4867-84ab-09f91adbfbd4.png)
+* The `get_hour_and_time()` output will be current hour and time
 
-* The `get_hour()` output will be like this:
+* The `get_minutes()` output will be current minutes
 
-![image](https://user-images.githubusercontent.com/96312446/209478648-a8a3de24-6c6d-433f-8915-4062925d857e.png)
+* The `get_seconds()` output will be your current **seconds**
 
-* The `get_hour_and_time()` output will be like this:
+* The `get_month()` output will be current **month**
 
-![image](https://user-images.githubusercontent.com/96312446/209478679-260d332e-e5e3-4f65-9a4f-075fb36ea82d.png)
+* The `is_holiday()` this function analyse the date and return holiday or if not a holiday returns "Right now,in your localtime,I not found any holiday!" 
 
-* The `get_minutes()` output will be like this:
-
-![image](https://user-images.githubusercontent.com/96312446/209478699-1ab0f4f5-efa4-406f-a87e-30291f9de7f8.png)
-
-* The `get_seconds()` output will be like this:
-
-![image](https://user-images.githubusercontent.com/96312446/209478721-9af7275c-9356-4b09-8431-6a4feabb3da6.png)
-
-* The `get_month()` output will be like this:
-
-![image](https://user-images.githubusercontent.com/96312446/209478949-b28b62ce-f41f-4889-9458-dde179986f67.png)
-
-* The `is_holiday()` this function analyse the date and return holiday or if not a holiday returns "Right now,in your localtime,I not found any holiday!" :
-
-![image](https://user-images.githubusercontent.com/96312446/209479072-a1f4cc61-f9b5-40fb-8288-197adaa1924b.png)
-
-* The `make_upper()` output will be like this:
+* The `make_upper()` code will be like this:
 
 ```c
 make_upper("cs12");
@@ -132,7 +83,7 @@ The result is:
 
 ![image](https://user-images.githubusercontent.com/96312446/209479255-8caa2f12-44b6-4be6-9e78-2f73e5962214.png)
 
-* The `make_lower()` output will be like this:
+* The `make_lower()` code will be like this:
 
 ```c
 make_lower("CS12");
@@ -142,7 +93,7 @@ The result is:
 
 ![image](https://user-images.githubusercontent.com/96312446/209479292-e26613f4-2582-416d-9df6-17c7d4198fc8.png)
 
-* The `what_lenght` output will be like this:
+* The `what_lenght` code will be like this:
 
 ```c
 what_lenght("en");
