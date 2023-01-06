@@ -1,2 +1,1 @@
-LDLIBS += -stdsb
 CC := clang
