@@ -4,14 +4,10 @@ Hello,again! This time we will make a custom libary for C
 
 # Details:
 
-Name:Enache
-
+Name:Enache 
 Surename:Sebastian Gabriel
-
 Age: 13 years old
-
 email: enachesebi615@yahoo.com
-
 school: Gimnaziala Nr.1 Lumina
 
 
