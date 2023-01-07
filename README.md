@@ -79,7 +79,7 @@ After we make swap function we make `test()` function,witch verify the library w
 
 You can install my library following this steps:
 
-> 1.Download last version of stdsb.h libary for ubuntu or you can clone to a Desktop folder with git follow this command:
+> 1.Download last version of stdsb.h library for ubuntu or you can clone to a Desktop folder with git follow this command:
 
 ```bash
 git clone https://github.con/AlyGame/stdsb.h
@@ -120,7 +120,7 @@ Press ENTER
 
 ##### Install for macOS:
 
-> 1.Download last version of stdsb.h libary for macOS go to Code press,and download zip or git clone my repo like this:
+> 1.Download last version of stdsb.h library for macOS go to Code press,and download zip or git clone my repo like this:
 
 ```bash
 git clone https://github.com/AlyGame/stdsb.h
