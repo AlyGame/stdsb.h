@@ -2,6 +2,5 @@
 
 int main()
 {
-    int a
-    
+    test();
 } 
