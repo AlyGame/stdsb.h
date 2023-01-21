@@ -8,6 +8,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+typedef char* string;
+typedef int integer;
 
 void new_line(void)
 {
@@ -26,7 +28,7 @@ void multiply(int a, int b)
     new_line();
 }
 
-void devide(int a, int b)
+void division(int a, int b)
 {
     printf("%d", a / b);
     new_line();
@@ -237,6 +239,76 @@ void test(void)
     swap(1, 2);
     new_line();
     add(1, 3);
+}
+
+void version()
+{
+    printf("Copyright for Sebastian Enache aka AlyGame\n");
+    printf("Version number: 0.0.2\n");
+}
+
+void print_string(char string[])
+{
+    printf("%s",string);
+}
+
+void print_int(int number_to_be_printded)
+{
+    printf("%d",number_to_be_printded);
+}
+
+void print_float(float number)
+{
+    printf("%f",number);
+}
+
+void print_double(double number)
+{
+    printf("%f",number);
+}
+
+void print_string_with_int(char string[],int num)
+{
+    printf("%s %i",string,num);
+}
+
+void print_string_with_float(string str,float n)
+{
+    printf("%s %f",str,n);
+}
+
+void print_double_with_string(string str,double num)
+{
+    printf("%s %f",str,num);
+}
+
+void print(string str)
+{
+    printf("%s",str);
+}
+
+void compare_max(int num,int num1)
+{
+    if(num < num1)
+    {
+        printf("%d is greater than %d",num1,num);
+    }
+    else if(num > num1)
+    {
+        printf("%d is greater than %d",num,num1);
+    }
+}
+
+void compare_min(int num,int num1)
+{
+    if(num < num1)
+    {
+        printf("%d is lower than %d",num,num1);
+    }
+    else if(num > num1)
+    {
+        printf("%d is lower than %d",num1,num);
+    }
 }
 
 

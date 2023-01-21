@@ -1,3 +1,21 @@
+# Introduction
+
+Hello,again! This time we will make a custom libary for C
+
+# Details:
+
+Name:Enache
+ 
+Surename:Sebastian Gabriel
+
+Age: 13 years old
+
+email: enachesebi615@yahoo.com
+
+school: Gimnaziala Nr.1 Lumina
+
+
+
 # Let's codeee
 
 First we make header file,witch contains functions for our code.
@@ -132,7 +150,7 @@ And type in file:
 CC := clang
 ```
 
-Press COMMAND + X
+Press CTRL + X
 Press Y
 Press ENTER
 
