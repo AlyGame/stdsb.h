@@ -114,6 +114,6 @@ And type in file:
 CC := clang
 ```
 
-Press CTRL + X
+Press COMMAND + X
 Press Y
 Press ENTER
