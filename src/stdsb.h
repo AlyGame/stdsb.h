@@ -7,8 +7,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <strings.h>
 
-typedef char* string;
+typedef char *string;
 typedef int integer;
 
 void new_line(void)
@@ -34,7 +35,7 @@ void division(int a, int b)
     new_line();
 }
 
-void sq_pf(int a)
+void square_of(int a)
 {
     printf("%d", a * a);
     new_line();
@@ -249,67 +250,151 @@ void version()
 
 void print_string(char string[])
 {
-    printf("%s",string);
+    printf("%s", string);
 }
 
 void print_int(int number_to_be_printded)
 {
-    printf("%d",number_to_be_printded);
+    printf("%d", number_to_be_printded);
 }
 
 void print_float(float number)
 {
-    printf("%f",number);
+    printf("%f", number);
 }
 
 void print_double(double number)
 {
-    printf("%f",number);
+    printf("%f", number);
 }
 
-void print_string_with_int(char string[],int num)
+void print_string_with_int(char string[], int num)
 {
-    printf("%s %i",string,num);
+    printf("%s %i", string, num);
 }
 
-void print_string_with_float(string str,float n)
+void print_string_with_float(string str, float n)
 {
-    printf("%s %f",str,n);
+    printf("%s %f", str, n);
 }
 
-void print_double_with_string(string str,double num)
+void print_double_with_string(string str, double num)
 {
-    printf("%s %f",str,num);
+    printf("%s %f", str, num);
 }
 
 void print(string str)
 {
-    printf("%s",str);
+    printf("%s", str);
 }
 
-void compare_max(int num,int num1)
+void compare_max(int num, int num1)
 {
-    if(num < num1)
+    if (num < num1)
     {
-        printf("%d is greater than %d",num1,num);
+        printf("%d is greater than %d", num1, num);
     }
-    else if(num > num1)
+    else if (num > num1)
     {
-        printf("%d is greater than %d",num,num1);
+        printf("%d is greater than %d", num, num1);
     }
 }
 
-void compare_min(int num,int num1)
+void compare_min(int num, int num1)
 {
-    if(num < num1)
+    if (num < num1)
     {
-        printf("%d is lower than %d",num,num1);
+        printf("%d is lower than %d", num, num1);
     }
-    else if(num > num1)
+    else if (num > num1)
     {
-        printf("%d is lower than %d",num1,num);
+        printf("%d is lower than %d", num1, num);
     }
 }
 
+void square_root(float num)
+{
+    float x = num;
+    float y = 1;
+    float e = 0.000001;
+    while (x - y > e)
+    {
+        x = (x + y) / 2;
+        y = num / x;
+    }
+    printf("%f",x);
+}
 
+// version 0.0.3
+
+void get_circle_lenght(int radius)
+{
+    printf("%d兀",radius * 2);
+}
+
+void get_circle_radius_from_lenght_pie(int lenght)
+{
+    printf("%d",lenght / 2);
+}
+
+void get_circle_area(int radius)
+{
+    printf("%d",radius*radius);
+}
+
+void get_triangle_perimeter(int first_size,int second_side,int third_side)
+{
+    printf("%d",first_size + second_side + third_side);
+}
+
+void get_triangle_area(int height,int base)
+{
+    printf("%d",(base * height) / 2);
+}
+
+void get_rectangle_perimeter(int first_size,int second_size,int third_size,int forth_size)
+{
+    printf("%d",first_size + second_size + third_size + forth_size);
+}
+
+void get_rectangle_area(int lenght,int width)
+{
+    printf("%d",lenght * width);
+}
+
+void get_trapeze_perimeter(int first_size,int second_size,int third_size,int forth_size)
+{
+    printf("%d",first_size + second_size + third_size + forth_size);
+}
+
+void get_trapeze_area(float big_base,float small_base,float height)
+{
+    printf("%f",(big_base + small_base) * height / 2);
+}
+
+void get_parallelogram_perimeter(int first_size,int second_size,int third_size,int forth_size)
+{
+    printf("%d",first_size + second_size + third_size + forth_size);
+}
+
+void get_parallelogram_area(float base,float height)
+{
+    printf("%f",base * height);
+}
+
+void get_rhomb_perimeter(int lenght)
+{
+    printf("%d",lenght * 4);
+}
+
+void get_rhomb_area(int height,int base)
+{
+    printf("%d",base * height);
+}
+
+void pythagoras_theorem(float first_cathetus,float second_cathetus)
+{
+    int third_cathetus = (first_cathetus) + (second_cathetus);
+    square_root(third_cathetus);
+}
 #endif
