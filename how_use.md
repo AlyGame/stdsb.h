@@ -163,6 +163,36 @@ compare_min(num1,num2);
 
 And the output will be: `1 is lower than 2`
 
+- How can I get square root,use `square_root()` function,in the brakets fill square number
+
+- How can I get circle lenght,use `get_circle_lenght()` function,in the brakets fill with circle radius
+
+- How can I get circle radius from lenght pie,with `get_circle_radius_form_lenght_pie()`,in the brakets fill with **ATTENTION!!** _circle lenght_
+
+- How can I get circle area,with `get_circle_area()` fucntion,in the brakets fill with **circle radius**
+
+- How can I get triangle perimeter,with `get_triangle_perimeter()`,fill in the brakets with triangle sides
+
+- How can I get triangle area,with `get_triangle_area()`,in the brakets fill with height and base of the triangle
+
+- How can I get rectangle perimeter,with `get_rectangle_perimeter()`,in the brakets fill with rectangle sides
+
+- How can I get rectangle area,with `get_rectangle_area(height,width)`,in the brakets,fill with height width
+
+- How can I get trapeze perimeter,with `get_trapez_perimeter()`,in the brakets fill with sides of trapeze
+
+- How can I get trapeze area,with `get_trapeze_area(big_base,small_base,height`,fill with big base,small base and height in the brakets
+
+- How can I get parallelogram perimeter,with `get_parallelogram_perimeter()`,fill with parallelogram sides
+
+- How can I get parallelogram area,with `get_parallelogram_area(base,height)`,fill this brakets with base and height
+
+- How can I get rhomb perimeter,with `get_rhomb_perimeter()`,fill this brakets with lenght of side od rhomb
+
+- How can I get rhomb area,with `get_rhomb_area(height,base)`,fill this brakets with height and base
+
+- How can apply pythagoras theorem,with `pythagoras_theorem(first_cathetus,second cathetus)`,fill with first cathetus and second cathetus
+
 # How test the libary works?
 
 Type this code to your code IDE:
