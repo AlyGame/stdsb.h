@@ -193,6 +193,122 @@ And the output will be: `1 is lower than 2`
 
 - How can apply pythagoras theorem,with `pythagoras_theorem(first_cathetus,second cathetus)`,fill with first cathetus and second cathetus
 
+- How can I clear terminal,with `clear_window(lines)`,fill in the brakets with number of lines
+
+- How can I read integer values,with `get_integer(message)`,fill in brakets with message,if you don't have any message you can make `""`
+
+- How can I read a char value,with `get_character(message)`,fill in the brakets with message,if you don't have any message you can make `""`
+
+- How can I read a float value,with `get_float(message)`,fill in the brakets with message,if you don't have any message you can make `""`
+
+- How can I encrypt a text,with `encrypt_string(text,key)`,you can make a simple encrypt with this code:
+
+```c
+    string name = "ABC";
+    char *encrypted = encrypt(name,11); 
+    printf("%s",encrypted); // print encrypted text
+    free(encrypted);
+```
+
+And the output will be `LMN` encrypted text.
+
+- How can I decrypt a text,first you need key encypted with `decrypt_string(text,key)` function.
+
+In our example key was 11,decrypt key is 11.
+
+```c
+string name = "LMN";
+    char *encrypted = decrypt(name,11);
+    printf("%s",encrypted);
+    free(encrypted);
+```
+
+Output will be "ABC".
+
+- How can I encrypt an integer,first you need key for encrypt function `encrypt_integer(num,key)`
+
+```c
+    int number = 11;
+    int encrypt_integer = encrypt_integer(number,11);
+
+    printf("%d",encrypt_integer);
+```
+
+Output will be 22.
+
+- How can I decrypt an integer,first you need a key for decrypt used for encryption,you can decrypt with `decrypt_integer(num,key)`
+
+```c
+    int number = 22;
+    int decrypt_num = decrypt_integer(number,11);
+
+    printf("%d",decrypt_num);
+```
+
+- How can I delete a file,with `remove_file(path)` like this code:
+
+```c
+remove_file("exaple.txt");
+```
+
+- How can I sort an array with integers,with `sort_int_array(array,array_size)` and `print_int_array(array_size)`
+
+```c
+    int array[] = {1865,2765,82653,8652,9762,62,6,1};
+    int array_size = sizeof(array) / sizeof(array[0]);
+
+    sort_int_array(array,array_size);
+    print_int_array(array_size,array);
+```
+
+Output will be: `1 6 62 1865 8652 9762 82653`
+
+- How can I sort an array with char,with `sort_char_array(array,array_size)`
+
+```c
+    char array[] = "POIUYTREWQLKJHGFDSAMNBVCXZ";
+    int array_size = strlen(array);
+
+    sort_char_array(array,array_size);
+    print_char_array(array_size,array);
+```
+
+Output will be:  `A B C D E F G H I J K L M N O P Q R S T U V W X Y Z`
+
+You can sort words with this code:
+
+```c
+    char words[][100] = {"dog", "apple", "cat", "banana"};
+    int n = 4;
+    sort_words_array(words, n);
+    print_words_array(words, n);
+```
+
+Output will be: `apple banana cat dog`
+
+- How can I reverse string? - with `reverse(string_name)`,fill the brakets with string name.
+
+```c
+    char str[] = "Hello, world!";
+    reverse(str);
+    printf("%s\n", str);
+    return 0;
+```
+
+Output: "!dlrow ,olleH"
+
+- How can I make concatenate strings with `concatenate_strings(str1,str2)` function.
+
+```c
+    char str1[] = "Hello";
+    char str2[] = ", world!";
+    char *concatenated_string = concatenate_strings(str1, str2);
+    printf("%s\n", concatenated_string);
+    free(concatenated_string);
+```
+
+Output: "Hello,world"
+
 # How test the libary works?
 
 Type this code to your code IDE:
