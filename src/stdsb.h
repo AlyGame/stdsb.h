@@ -12,6 +12,8 @@
 typedef char *string;
 typedef int integer;
 
+// version 0.0.1
+
 void new_line(void)
 {
     printf("\n");
@@ -242,11 +244,7 @@ void test(void)
     add(1, 3);
 }
 
-void version()
-{
-    printf("Copyright for Sebastian Enache aka AlyGame\n");
-    printf("Version number: 0.0.2\n");
-}
+// version 0.0.1
 
 void print_string(char string[])
 {
@@ -322,79 +320,291 @@ void square_root(float num)
         x = (x + y) / 2;
         y = num / x;
     }
-    printf("%f",x);
+    printf("%f", x);
 }
 
 // version 0.0.3
 
 void get_circle_lenght(int radius)
 {
-    printf("%d兀",radius * 2);
+    printf("%d兀", radius * 2);
 }
 
 void get_circle_radius_from_lenght_pie(int lenght)
 {
-    printf("%d",lenght / 2);
+    printf("%d", lenght / 2);
 }
 
 void get_circle_area(int radius)
 {
-    printf("%d",radius*radius);
+    printf("%d", radius * radius);
 }
 
-void get_triangle_perimeter(int first_size,int second_side,int third_side)
+void get_triangle_perimeter(int first_size, int second_side, int third_side)
 {
-    printf("%d",first_size + second_side + third_side);
+    printf("%d", first_size + second_side + third_side);
 }
 
-void get_triangle_area(int height,int base)
+void get_triangle_area(int height, int base)
 {
-    printf("%d",(base * height) / 2);
+    printf("%d", (base * height) / 2);
 }
 
-void get_rectangle_perimeter(int first_size,int second_size,int third_size,int forth_size)
+void get_rectangle_perimeter(int first_size, int second_size, int third_size, int forth_size)
 {
-    printf("%d",first_size + second_size + third_size + forth_size);
+    printf("%d", first_size + second_size + third_size + forth_size);
 }
 
-void get_rectangle_area(int lenght,int width)
+void get_rectangle_area(int lenght, int width)
 {
-    printf("%d",lenght * width);
+    printf("%d", lenght * width);
 }
 
-void get_trapeze_perimeter(int first_size,int second_size,int third_size,int forth_size)
+void get_trapeze_perimeter(int first_size, int second_size, int third_size, int forth_size)
 {
-    printf("%d",first_size + second_size + third_size + forth_size);
+    printf("%d", first_size + second_size + third_size + forth_size);
 }
 
-void get_trapeze_area(float big_base,float small_base,float height)
+void get_trapeze_area(float big_base, float small_base, float height)
 {
-    printf("%f",(big_base + small_base) * height / 2);
+    printf("%f", (big_base + small_base) * height / 2);
 }
 
-void get_parallelogram_perimeter(int first_size,int second_size,int third_size,int forth_size)
+void get_parallelogram_perimeter(int first_size, int second_size, int third_size, int forth_size)
 {
-    printf("%d",first_size + second_size + third_size + forth_size);
+    printf("%d", first_size + second_size + third_size + forth_size);
 }
 
-void get_parallelogram_area(float base,float height)
+void get_parallelogram_area(float base, float height)
 {
-    printf("%f",base * height);
+    printf("%f", base * height);
 }
 
 void get_rhomb_perimeter(int lenght)
 {
-    printf("%d",lenght * 4);
+    printf("%d", lenght * 4);
 }
 
-void get_rhomb_area(int height,int base)
+void get_rhomb_area(int height, int base)
 {
-    printf("%d",base * height);
+    printf("%d", base * height);
 }
 
-void pythagoras_theorem(float first_cathetus,float second_cathetus)
+void pythagoras_theorem(float first_cathetus, float second_cathetus)
 {
     int third_cathetus = (first_cathetus) + (second_cathetus);
     square_root(third_cathetus);
 }
+
+// version 0.0.4
+
+void clear_window(int lines)
+{
+    for (int i = 0; i < lines; i++)
+    {
+        printf("\n");
+    }
+}
+
+int get_integer(char message[])
+{
+    printf("%s", message);
+    int n;
+    int check = scanf("%d", &n);
+
+    while (check != 1)
+    {
+        printf("Retry: ");
+        fflush(stdin);
+        check = scanf("%d", &n);
+    }
+    return n;
+}
+
+char get_character(char message[])
+{
+    printf("%s", message);
+    char c = getchar();
+    while (isspace(c))
+    {
+        c = getchar();
+    }
+    return c;
+}
+
+float get_float(char message[])
+{
+    float n;
+    int check = scanf("%f", &n);
+
+    while (check != 1)
+    {
+        printf("Retry: ");
+        fflush(stdin);
+        check = scanf("%f", &n);
+    }
+    return n;
+}
+
+char *encrypt_string(char *text, int key)
+{
+    int length = strlen(text);
+    char *encrypted_text = (char *)malloc(length + 1);
+    for (int i = 0; i < length; i++)
+    {
+        encrypted_text[i] = text[i] + key;
+    }
+    encrypted_text[length] = '\0';
+    return encrypted_text;
+}
+
+char *decrypt_string(char *text, int key)
+{
+    int lenght = strlen(text);
+    char *decrypted_text = (char *)malloc(lenght + 1);
+    for (int i = 0; i < lenght; i++)
+    {
+        decrypted_text[i] = text[i] - key;
+    }
+    decrypted_text[lenght] = '\0';
+    return decrypted_text;
+}
+
+int encrypt_integer(int num, int key)
+{
+    return num + key;
+}
+
+int decrypt_integer(int num, int key)
+{
+    return num - key;
+}
+
+int remove_file(const char *file_name)
+{
+    if (remove(file_name) == 0)
+    {
+        return 0;
+    }
+    else
+    {
+        perror("Error deleting file!\n");
+        return 1;
+    }
+}
+
+void sort_int_array(int *array, int array_size)
+{
+    int i, j, temp;
+    for (i = 0; i < array_size - 1; i++)
+    {
+        for (j = 0; j < array_size - i - 1; j++)
+        {
+            if (array[j] > array[j + 1])
+            {
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+}
+
+void print_int_array(int arraySize, int array[arraySize])
+{
+    while (arraySize--)
+    {
+        printf("%d ", *array++);
+    }
+    printf("\n");
+}
+
+void sort_char_array(char *array, int arraySize)
+{
+    int i, j;
+    char temp;
+    for (i = 0; i < arraySize - 1; i++)
+    {
+        for (j = 0; j < arraySize - i - 1; j++)
+        {
+            if (array[j] > array[j + 1])
+            {
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+}
+
+void print_char_array(int arraySize, char array[arraySize])
+{
+    while (arraySize--)
+    {
+        printf("%c ", *array++);
+    }
+    printf("\n");
+}
+
+void sort_words_array(char words[][100], int n)
+{
+    char temp[100];
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if (strcmp(words[i], words[j]) > 0)
+            {
+                strcpy(temp, words[i]);
+                strcpy(words[i], words[j]);
+                strcpy(words[j], temp);
+            }
+        }
+    }
+}
+
+void print_words_array(char words[][100], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("%s ", words[i]);
+    }
+    printf("\n");
+}
+
+void reverse(char *str)
+{
+    int length = strlen(str);
+    int half_length = length / 2;
+    for (int i = 0; i < half_length; i++)
+    {
+        char temp = str[i];
+        str[i] = str[length - i - 1];
+        str[length - i - 1] = temp;
+    }
+}
+
+int string_length(char *str) {
+    int length = 0;
+    while (*str != '\0') {
+        length++;
+        str++;
+    }
+    return length;
+}
+
+char *concatenate_strings(char *str1, char *str2) {
+    int length1 = string_length(str1);
+    int length2 = string_length(str2);
+    char *result = (char *)malloc(length1 + length2 + 1);
+    for (int i = 0; i < length1; i++) {
+        result[i] = str1[i];
+    }
+    for (int i = 0; i < length2; i++) {
+        result[length1 + i] = str2[i];
+    }
+    result[length1 + length2] = '\0';
+    return result;
+}
+
 #endif
